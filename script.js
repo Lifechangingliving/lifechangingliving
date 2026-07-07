@@ -19,6 +19,35 @@ if ('IntersectionObserver' in window) {
   revEls.forEach(function(el){ el.classList.add('in'); });
 }
 
+// mobile menu
+var menuToggle = document.querySelector('.menu-toggle');
+var mobileMenu = document.querySelector('.mobile-menu');
+if (menuToggle && mobileMenu) {
+  var closeMenu = function(){
+    mobileMenu.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+    document.body.classList.remove('menu-open');
+  };
+  var openMenu = function(){
+    mobileMenu.classList.add('open');
+    menuToggle.classList.add('open');
+    menuToggle.setAttribute('aria-expanded','true');
+    document.body.classList.add('menu-open');
+  };
+  menuToggle.addEventListener('click', function(){
+    if (mobileMenu.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+  var closeBtn = mobileMenu.querySelector('.mobile-menu-close');
+  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeMenu();
+  });
+}
+
 // FAQ accordion
 document.querySelectorAll('.faqq').forEach(function(btn){
   btn.addEventListener('click', function(){
