@@ -36,6 +36,7 @@
       <a href="#home" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="#serve">Who We Serve</a>
+      <a href="apply.html">Apply</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
@@ -53,6 +54,7 @@
   <a href="#home" class="active">Home</a>
   <a href="about.html">About</a>
   <a href="#serve">Who We Serve</a>
+  <a href="apply.html">Apply</a>
   <a href="#faq">FAQ</a>
   <a href="#contact">Contact</a>
   <a class="btn btn-gold" href="#contact">Call 832-892-9392</a>
@@ -76,7 +78,7 @@
     <p class="sub rev d2">Safe, affordable residential living for adults seeking stability, support, and a place where dignity matters.</p>
     <div class="hero-loc rev d2">Houston, Texas Area</div>
     <div class="cta-row rev d3">
-      <a class="btn btn-gold" href="#contact">Apply Today</a>
+      <a class="btn btn-gold" href="apply.html">Apply Today</a>
       <a class="btn btn-outline-lt" href="tel:8328929392">Call 832-892-9392</a>
     </div>
   </div>
@@ -280,7 +282,7 @@
       <p class="rev d2">Community, connection, and a daily rhythm that feels like home &mdash; not a facility. Residents share meals, build friendships, and find their footing again in an environment built around dignity and real care.</p>
       <p class="rev d2">This is what it actually looks like to be treated like family.</p>
       <div class="cta-row rev d3" style="margin-top:32px;">
-        <a class="btn btn-gold" href="#contact">Apply Today</a>
+        <a class="btn btn-gold" href="apply.html">Apply Today</a>
       </div>
     </div>
   </div>
@@ -341,7 +343,7 @@
   </div>
   <div class="why-outer">
     <div class="why-photo-col rev">
-      <img src="images/why-choose-care.jpg" alt="Compassionate care at Life Changing Living — fresh towels and personal touches that make residents feel at home" width="1058" height="638" loading="lazy">
+      <img src="images/why-choose-care.jpg" alt="A warm, welcoming presence at Life Changing Living" width="640" height="960" loading="lazy">
     </div>
     <div class="why-cards-col">
     <div class="fgrid">
@@ -522,7 +524,7 @@
           <div class="cval" style="font-size:16px;font-family:'DM Sans',sans-serif;">Houston, TX Area</div>
           <div class="cnote">Exact address shared during the application process — standard privacy practice for residential homes.</div>
         </div>
-        <a class="btn btn-gold" href="#faq">Schedule a Consultation</a>
+        <a class="btn btn-gold" href="apply.html">Apply Today</a>
       </div>
     </div>
   </div>
@@ -535,6 +537,18 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- ══ CHAT AGENT WIDGET ══
+     Replace WEBHOOK_URL below with your n8n Chat Trigger's production
+     webhook URL once the "Life Changing Living — Chat Agent" workflow
+     (see /n8n/chat-agent-workflow.json) is imported and activated. -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet">
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  createChat({
+    webhookUrl: 'https://deft-bison-84.nbg1-3.instapods.app/webhook/REPLACE_AFTER_IMPORT/chat'
+  });
+</script>
 
 </body>
 </html>
